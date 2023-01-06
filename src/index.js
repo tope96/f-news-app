@@ -1,7 +1,17 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import Test from "./Test";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
-const container = document.getElementById("root");
+import { Provider } from 'react-redux';
+import store from './store';
+
+import Home from './components/home/Home';
+import GlobalStyle from './global-style';
+
+const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<Test />);
+root.render(
+  <Provider store={store}>
+    <GlobalStyle />
+    <Home />
+  </Provider>,
+);
