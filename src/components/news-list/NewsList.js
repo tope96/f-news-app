@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import NewsItem from '../news-item/NewsItem';
 import { List, NewsWrapper } from './style';
 import Info from '../info/Info';
+import { env } from '../../env';
 
 export const trimContent = (content) => {
   let splitted = content.split('').splice(0, 61);
@@ -15,7 +16,7 @@ export const trimContent = (content) => {
 };
 
 function NewsList() {
-  const API_KEY = '';
+  const { API_KEY } = env;
   const pageSize = useSelector((state) => state.pageSize);
   const country = useSelector((state) => state.country);
   const [news, setNews] = useState([]);
