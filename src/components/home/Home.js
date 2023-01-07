@@ -1,11 +1,12 @@
 import Navbar from '../navbar/Navbar';
+import NewsList from '../news-list/NewsList';
 
 function Home() {
   return (
-    <>
+    <div data-testid="home-component">
       <Navbar />
-      <h1>Home</h1>
-    </>
+      <NewsList />
+    </div>
   );
 }
 
