@@ -30,8 +30,8 @@ function Navbar() {
 
   return (
     <Nav>
-      <Filter optionsArray={countriesDictionary} defaultOptionIndex={defaultCountryIndex} label="Kraj: " setSelectedValue={setSelectedValueCountryIndex} />
-      <Filter optionsArray={pageSizeDictionary} defaultOptionIndex={defaultPageSizeIndex} label="Ilość wyników: " setSelectedValue={setSelectedValuePageSize} />
+      <Filter optionsArray={countriesDictionary} defaultOptionIndex={Number(defaultCountryIndex)} label="Kraj: " setSelectedValue={setSelectedValueCountryIndex} />
+      <Filter optionsArray={pageSizeDictionary} defaultOptionIndex={Number(defaultPageSizeIndex)} label="Ilość wyników: " setSelectedValue={setSelectedValuePageSize} />
     </Nav>
   );
 }
